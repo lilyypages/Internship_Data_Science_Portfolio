@@ -6,40 +6,46 @@ import { skillCategories, type Skill } from "@/lib/skills";
 
 const teamMembers = [
   {
-    category: "DATA ENGINEERING",
     name: "Prayuda Afifan Handoyo",
-    desc: "Deskripsi anggota. Jelaskan latar belakang, minat, keahlian, dan kontribusi dalam tim.",
+    desc: "Berfokus pada data engineering dan machine learning dengan perolehan IPK 3,95. Berpengalaman membangun sistem data secara end-to-end, mulai dari perancangan pipeline dan pemodelan data hingga tahap deployment.",
     image: "/assets/team/member_01.jpg",
+    linkedin: "https://www.linkedin.com/in/prayudahandoyo/",
+    cv: "/assets/cv/CVATSPrayuda.pdf",
   },
   {
-    category: "BIG DATA ANALYTICS",
     name: "Anindya Artanti Pambudi",
-    desc: "Deskripsi anggota. Jelaskan latar belakang, minat, keahlian, dan kontribusi dalam tim.",
+    desc: "Berpengalaman dua kali sebagai Data Analyst Intern dengan perolehan IPK 3,96. Menguasai statistika, analisis data, machine learning, database management, serta data engineering untuk mengolah data menjadi solusi yang akurat.",
     image: "/assets/team/member_02.jpg",
+    linkedin: "https://www.linkedin.com/in/anindyaartanti/",
+    cv: "/assets/cv/CVATSAnindya.pdf",
   },
   {
-    category: "DATA SCIENCE",
     name: "Lois Ryannareta",
-    desc: "Deskripsi anggota. Jelaskan latar belakang, minat, keahlian, dan kontribusi dalam tim.",
+    desc: "Aktif mengembangkan diri secara akademis maupun nonakademis dengan fokus pada analisis, pengolahan, dan visualisasi data. Menguasai statistika, machine learning, business intelligence, dan database management.",
     image: "/assets/team/member_03.jpg",
+    linkedin: "https://www.linkedin.com/in/loisryannareta",
+    cv: "/assets/cv/CVATSLois.pdf",
   },
   {
-    category: "MACHINE LEARNING",
     name: "Viola Herfina Putri",
-    desc: "Deskripsi anggota. Jelaskan latar belakang, minat, keahlian, dan kontribusi dalam tim.",
+    desc: "Berfokus pada analisis dan visualisasi data yang dipadukan dengan eksplorasi UI design. Mampu mengubah data mentah menjadi sajian visual yang fungsional, logis, sekaligus memiliki nilai estetika tinggi.",
     image: "/assets/team/member_04.jpg",
+    linkedin: "https://www.linkedin.com/in/violaherfina",
+    cv: "/assets/cv/CVATSViola.pdf",
   },
   {
-    category: "AI & WEB",
     name: "Dhea Meidiyana Windawati",
-    desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+    desc: "Berfokus pada bidang data analytics, khususnya dalam pengolahan dan visualisasi data. Aktif berorganisasi serta memiliki pemahaman kuat di bidang statistika, machine learning, dan database management.",
     image: "/assets/team/member_05.jpg",
+    linkedin: "https://www.linkedin.com/in/dheameidiyana/",
+    cv: "/assets/cv/CVATSDhea.pdf",
   },
   {
-    category: "AI & WEB",
     name: "Talitha Sukma Mahardika",
-    desc: "Deskripsi anggota. Jelaskan latar belakang, minat, keahlian, dan kontribusi dalam tim.",
+    desc: "Berfokus pada Data Analysis, Data Science, dan Web Development. Mampu mengolah data menjadi informasi bernilai serta mengembangkannya ke bentuk dashboard analitik maupun aplikasi web fungsional.",
     image: "/assets/team/member_06.jpg",
+    linkedin: "https://www.linkedin.com/in/talithasm",
+    cv: "/assets/cv/CVATSTalitha.pdf",
   },
 ];
 
@@ -58,7 +64,7 @@ export default function Home() {
       <header className="navbar">
         <div className="container navbar-inner">
           <a href="#" className="logo">
-            DS<span>.</span>PORTFOLIO
+            DATA SCIENCE
           </a>
           <nav>
             <a href="#about">About</a>
@@ -154,21 +160,25 @@ export default function Home() {
             </h2>
           </div>
           <div className="about-description">
-            <span className="small-label">ABOUT THE PROGRAM</span>
-            <h3>Apa itu Magang Berdampak?</h3>
-            <p>
-              Magang Berdampak merupakan kesempatan bagi mahasiswa untuk
-              memperoleh pengalaman profesional, mengembangkan kompetensi, dan
-              menghasilkan karya yang memberikan dampak nyata bagi masyarakat
-              maupun industri.
-            </p>
-            <p>
-              Melalui pendekatan sains data, kami mengeksplorasi berbagai
-              teknologi untuk mengolah data, membangun model analisis,
-              mengembangkan infrastruktur, dan menciptakan solusi berbasis
-              teknologi.
-            </p>
-          </div>
+          <span className="small-label">ABOUT THE PROGRAM</span>
+          <h3>Apa itu Magang Berdampak?</h3>
+          <p>
+            Magang Berdampak menjadi wadah bagi mahasiswa untuk terjun langsung ke
+            dunia industri, merasakan dinamika kerja profesional secara nyata, dan
+            mengembangkan kapasitas diri di luar ruang perkuliahan. Melalui program
+            ini, kami didorong untuk berkolaborasi, menghadapi tantangan nyata, serta
+            melahirkan karya inovatif yang memberi dampak positif bagi masyarakat dan
+            industri.
+          </p>
+          <p>
+            Sebagai mahasiswa sains data, kami ingin membawa pengetahuan dan
+            pengalaman yang kami peroleh di perkuliahan ke dunia industri — mulai
+            dari pengolahan dan eksplorasi data, pembangunan model analitik, hingga
+            perancangan sistem yang fungsional. Kami percaya bahwa ilmu yang kami
+            pelajari akan lebih bermakna ketika mampu diimplementasikan menjadi solusi
+            nyata yang tepat guna.
+          </p>
+        </div>
         </div>
         </div>
       </section>
@@ -194,12 +204,15 @@ export default function Home() {
                 <img src={m.image} alt={m.name} />
               </div>
               <div className="member-info">
-                <span>{m.category}</span>
                 <h3>{m.name}</h3>
                 <p>{m.desc}</p>
                 <div className="member-links">
-                  <a href="#">LinkedIn ↗</a>
-                  <a href="#">View CV ↗</a>
+                  <a href={m.linkedin} target="_blank" rel="noopener noreferrer">
+                    LinkedIn ↗
+                  </a>
+                  <a href={m.cv} target="_blank" rel="noopener noreferrer">
+                    View CV ↗
+                  </a>
                 </div>
               </div>
             </article>
@@ -309,7 +322,7 @@ export default function Home() {
           </a>
           <div className="closing-footer">
             MAGANG BERDAMPAK · SAINS DATA UNS 2027
-            <span>KELOMPOK XXX</span>
+            <span>KELOMPOK 05</span>
           </div>
         </div>
       </section>
@@ -317,7 +330,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <div className="container footer-inner">
-          <a href="#" className="logo">DS<span>.</span>PORTFOLIO</a>
+          <a href="#" className="logo">DATA SCIENCE</a>
           <span>Built with curiosity &amp; purpose.</span>
           <a href="#home">BACK TO TOP ↑</a>
         </div>

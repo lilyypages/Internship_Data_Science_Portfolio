@@ -39,10 +39,11 @@ html {
 
 body {
   color: var(--text);
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   min-height: 100vh;
+  letter-spacing: -0.01px;
 
   /* BASE + aurora bertumpuk, TIDAK ada pita tajam */
   background:
@@ -63,6 +64,13 @@ a {
 section {
   scroll-margin-top: 40px;
   position: relative;
+}
+
+/* --- HEADINGS (Plus Jakarta Sans) --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-plus-jakarta), sans-serif; /* Panggil pakai var */
+  font-weight: 800; 
+  letter-spacing: -0.03em; 
 }
 
 /* Container */
@@ -143,12 +151,14 @@ section {
 
 .hero {
   position: relative;
-  padding-top: 50px; /* Jarak dari navbar */
-  padding-bottom: 80px; /* Jarak bawah */
+  /* Hitung tinggi layar dikurangi tinggi navbar (80px) */
+  min-height: calc(100vh - 80px); 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* Konten otomatis ke tengah */
   overflow: hidden;
+  padding-top: 20px; /* Kurangi dari 50px */
+  padding-bottom: 20px; /* Kurangi dari 80px */
 }
 
 /* Aurora bergerak pelan */
@@ -241,25 +251,26 @@ section {
   text-transform: uppercase;
 }
 
-/* GANTI BAGIAN HERO-TITLE-WRAP & RING LAMA DENGAN INI */
 .hero-title-wrap {
   position: relative;
   display: inline-block;
   margin-top: 28px;
-  padding: 40px 20px 40px 0; /* Padding biar ring muat */
+  /* Hapus padding 40px, ganti jadi sedikit padding agar orbit muat */
+  padding: 20px 20px 20px 0; 
+  z-index: 5; /* Pastikan di atas orbit */
 }
 
-/* Vignette gelap di belakang judul (bikin dalam ring berasa gelap) */
+/* Vignette gelap di belakang judul */
 .hero-title-wrap::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 50%; /* Ubah dari 30% ke 50% agar center */
   transform: translate(-50%, -50%);
-  width: 130%;
+  width: 140%;
   height: 140%;
-  background: radial-gradient(circle, rgba(8, 10, 28, 0.8) 0%, transparent 65%);
-  z-index: 0;
+  background: radial-gradient(circle, rgba(8, 10, 28, 0.85) 0%, transparent 65%);
+  z-index: -1; /* Taruh di bawah teks */
   pointer-events: none;
   filter: blur(20px);
 }
@@ -268,28 +279,31 @@ section {
   position: relative;
   font-size: clamp(58px, 8vw, 104px);
   line-height: 0.88;
-  letter-spacing: -6px;
+  letter-spacing: -0.04em; /* Pake em biar responsif */
   font-weight: 800;
   background: linear-gradient(140deg, #FFFFFF 20%, #F7C6DD 55%, #8FD3FF 95%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  z-index: 2; /* Di atas ring */
+  z-index: 10; /* KUNCI: Teks paling atas, ga akan ketutup orbit */
   text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  /* Tambahkan sedikit padding kanan agar huruf 'e' aman */
+  padding-right: 10px; 
 }
 
 /* --- ORBIT SYSTEM BARU (PRESISI) --- */
 .hero-orbit {
   position: absolute;
-  top: 50%;
-  left: 40%; /* Disesuaikan posisinya dengan teks */
+  top: 65%;
+  left: 45%; /* Sedikit geser ke kanan agar pas di tengah teks */
   transform: translate(-50%, -50%);
-  width: 460px; /* Ukuran ring */
-  height: 460px;
-  z-index: 1;
+  width: 500px; /* Perbesar sedikit ring-nya */
+  height: 500px;
+  z-index: 1; /* Di bawah teks (h1 z-index 10), di atas background */
   pointer-events: none;
 }
 
+/* ... (biarkan .orbit-ring, .ring-2, .orbit-dot, dll sama seperti sebelumnya) ... */
 /* Lingkaran Garis Tipis */
 .orbit-ring {
   position: absolute;
@@ -332,21 +346,21 @@ section {
 }
 
 @keyframes orbit {
-  0%   { transform: rotate(0deg) translateX(230px) rotate(0deg); }
-  100% { transform: rotate(360deg) translateX(230px) rotate(-360deg); }
+  0%   { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
 }
 
 @keyframes orbit-reverse {
-  0%   { transform: rotate(360deg) translateX(195px) rotate(-360deg); }
-  100% { transform: rotate(0deg) translateX(195px) rotate(0deg); }
+  0%   { transform: rotate(360deg) translateX(215px) rotate(-360deg); }
+  100% { transform: rotate(0deg) translateX(215px) rotate(0deg); }
 }
 
-/* Penempatan di HP (Responsive) */
+/* Responsif HP */
 @media (max-width: 900px) {
   .hero-orbit {
     width: 340px;
     height: 340px;
-    left: 50%; /* Center di HP */
+    left: 50%;
   }
   @keyframes orbit {
     0%   { transform: rotate(0deg) translateX(170px) rotate(0deg); }
@@ -435,7 +449,7 @@ section {
 }
 
 .hero-right em {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-instrument-serif), serif;
   color: var(--pink);
   font-style: italic;
 }
@@ -502,7 +516,7 @@ section {
 }
 
 .section h2 em {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-instrument-serif), serif;
   color: var(--pink);
   font-weight: 500;
   font-style: italic;
@@ -514,31 +528,51 @@ section {
 
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 72px;
+  grid-template-columns: 1fr 1.4fr;   /* kolom kanan lebih lebar */
+  gap: 56px;                          /* gap lebih rapat */
   margin-top: 42px;
+  align-items: start;                 /* heading tidak ikut memanjang */
 }
 
 .about-description {
-  max-width: 560px;
+  max-width: 620px;                   /* naik dari 560px */
 }
 
 .small-label {
+  display: inline-block;
   font-size: 10px;
   letter-spacing: 2px;
   color: var(--cyan);
+  margin-bottom: 4px;
 }
 
 .about-description h3 {
   font-size: 21px;
-  margin: 12px 0;
+  margin: 8px 0 16px;
+  line-height: 1.35;
 }
 
 .about-description p {
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.9;
-  margin-bottom: 16px;
+  line-height: 1.8;                   /* dari 1.9 → lebih rapat */
+  margin-bottom: 14px;
+}
+
+.about-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsif: stack di mobile/tablet */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-description {
+    max-width: 100%;
+  }
 }
 
 /* ==================================
@@ -664,15 +698,14 @@ section {
 .category-heading p {
   font-size: 15px;
   color: var(--muted);
-  line-height: 1.8;
-  max-width: 620px;
+  line-height: 1.5;
+  max-width: 800px;
 }
 
 .capability-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
-  margin: 18px 0 8px;
+  gap: 5px;
 }
 
 .capability-chips span {
@@ -680,7 +713,7 @@ section {
   border-radius: 30px;
   background: rgba(240, 139, 192, 0.10);
   color: #FFD7E7;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 600;
   box-shadow: 0 0 0 1px rgba(240, 139, 192, 0.25) inset;
 }
@@ -689,8 +722,8 @@ section {
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin: 22px 0 28px;
+  gap: 8px;
+  margin: 18px 0 28px;
 }
 
 /* Kotak pembungkus logo */
@@ -827,7 +860,7 @@ section {
 }
 
 .project-content > span {
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 2px;
   color: var(--cyan);
   font-weight: 600;
@@ -835,7 +868,7 @@ section {
 }
 
 .project-content h3 {
-  font-size: px; /* Kecilkan dari 22px */
+  font-size: 18px; /* Kecilkan dari 22px */
   line-height: 1.3;
   margin-bottom: 10px;
   color: var(--text);
@@ -843,9 +876,9 @@ section {
 
 .project-content p {
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 16px;
   flex-grow: 1; /* Mendorong link ke paling bawah */
 }
 
@@ -918,7 +951,7 @@ section {
 }
 
 .closing h2 em {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-instrument-serif), serif;
   color: var(--pink);
   font-style: italic;
 }

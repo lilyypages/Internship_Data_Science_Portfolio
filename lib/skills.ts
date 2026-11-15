@@ -109,7 +109,7 @@ export const skillCategories: SkillCategory[] = [
     index: "02",
     label: "DATA ANALYTICS & BI",
     title: "Data Analytics",
-    titleEm: "& BI",
+    titleEm: "& Business Intelligence",
     description: "Mengubah data menjadi insight bisnis dan dashboard interaktif untuk mendukung keputusan.",
     coreCapabilities: [
       "Data Cleaning & Preprocessing",
