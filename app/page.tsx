@@ -17,7 +17,7 @@ const teamMembers = [
     desc: "Berpengalaman dua kali sebagai Data Analyst Intern dengan perolehan IPK 3,96. Menguasai statistika, analisis data, machine learning, database management, serta data engineering untuk mengolah data menjadi solusi yang akurat.",
     image: "/assets/team/member_02.jpg",
     linkedin: "https://www.linkedin.com/in/anindyaartanti/",
-    cv: "/assets/cv/CVATSAnindya.pdf",
+    cv: "/assets/cv/CVATSAnin.pdf",
   },
   {
     name: "Lois Ryannareta",
