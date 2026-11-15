@@ -40,11 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# --- FILE ASSETS YANG DI-IGNORE ---
-# Mengabaikan file CV (PDF) karena biasanya ukurannya besar dan bersifat privat
-/public/assets/cv/*
-# (Tapi melacak file .gitkeep jika kamu pakai file kosong di dalam folder cv)
-!/public/assets/cv/.gitkeep
 
 # Mengabaikan file mentah desain (jika nanti kamu nambah)
 *.psd
