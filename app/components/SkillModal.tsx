@@ -91,7 +91,7 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
               <h2>{skill.title}</h2>
               {skill.link && (
                 <a href={skill.link} target="_blank" rel="noopener noreferrer" className="modal-link-btn">
-                  Kunjungi Website ↗
+                  Details ↗
                 </a>
               )}
             </div>

@@ -163,10 +163,10 @@ export default function Home() {
           <span className="small-label">ABOUT THE PROGRAM</span>
           <h3>Apa itu Magang Berdampak?</h3>
           <p>
-            Magang Berdampak menjadi wadah bagi mahasiswa untuk terjun langsung ke
+            Magang Berdampak merupakan wadah bagi mahasiswa untuk terjun langsung ke
             dunia industri, merasakan dinamika kerja profesional secara nyata, dan
             mengembangkan kapasitas diri di luar ruang perkuliahan. Melalui program
-            ini, kami didorong untuk berkolaborasi, menghadapi tantangan nyata, serta
+            ini, mahasiswa didorong untuk berkolaborasi, menghadapi tantangan nyata, serta
             melahirkan karya inovatif yang memberi dampak positif bagi masyarakat dan
             industri.
           </p>
@@ -317,7 +317,7 @@ export default function Home() {
             data <em>matter.</em>
           </h2>
           <p>We are ready to learn, collaborate, and create something impactful together.</p>
-          <a href="mailto:emailkelompok@example.com" className="primary-button">
+          <a href="mailto:talithasukma@student.uns.ac.id" className="primary-button">
             WORK WITH US ↗
           </a>
           <div className="closing-footer">
