@@ -9,18 +9,25 @@ type Props = {
   onClose: () => void;
 };
 
+// Helper: deteksi URL video (mp4/webm/ogg/mov atau Cloudinary /video/upload/)
+const isVideo = (url: string) =>
+  /\.(mp4|webm|ogg|mov)(\?.*)?$/i.test(url) || url.includes("/video/upload/");
+
 export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentImg, setCurrentImg] = useState(0);
 
   // Logika: Pakai gallery kalau ada, kalau nggak pakai image utama
-  const images = skill?.gallery && skill.gallery.length > 0 
-    ? skill.gallery 
-    : (skill?.image ? [skill.image] : []);
+  const images =
+    skill?.gallery && skill.gallery.length > 0
+      ? skill.gallery
+      : skill?.image
+      ? [skill.image]
+      : [];
 
   useEffect(() => {
     if (!skill) return;
-    
+
     setCurrentImg(0);
     if (scrollRef.current) {
       scrollRef.current.scrollTop = 0;
@@ -31,7 +38,7 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
     };
     document.addEventListener("keydown", handleKey);
     document.body.style.overflow = "hidden";
-    
+
     return () => {
       document.removeEventListener("keydown", handleKey);
       document.body.style.overflow = "";
@@ -44,7 +51,8 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
     if (images.length > 1) setCurrentImg((prev) => (prev + 1) % images.length);
   };
   const prevImg = () => {
-    if (images.length > 1) setCurrentImg((prev) => (prev - 1 + images.length) % images.length);
+    if (images.length > 1)
+      setCurrentImg((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
@@ -60,21 +68,36 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
         </button>
 
         <div className="modal-scroll-area" ref={scrollRef}>
-          
-          {/* --- BAGIAN CAROUSEL GAMBAR --- */}
+          {/* --- BAGIAN CAROUSEL GAMBAR / VIDEO --- */}
           {images.length > 0 && (
             <div className="modal-carousel">
-              <img 
-                src={images[currentImg]} 
-                alt={`${skill.title} - ${currentImg + 1}`} 
-                className="carousel-image"
-              />
-              
-              {/* Tombol Navigasi (Cuma muncul kalau gambar lebih dari 1) */}
+              {isVideo(images[currentImg]) ? (
+                <video
+                  key={images[currentImg]}
+                  src={images[currentImg]}
+                  className="carousel-image"
+                  controls
+                  autoPlay
+                  muted
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={images[currentImg]}
+                  alt={`${skill.title} - ${currentImg + 1}`}
+                  className="carousel-image"
+                />
+              )}
+
+              {/* Tombol Navigasi (Cuma muncul kalau item lebih dari 1) */}
               {images.length > 1 && (
                 <>
-                  <button className="carousel-btn prev" onClick={prevImg}>❮</button>
-                  <button className="carousel-btn next" onClick={nextImg}>❯</button>
+                  <button className="carousel-btn prev" onClick={prevImg}>
+                    ❮
+                  </button>
+                  <button className="carousel-btn next" onClick={nextImg}>
+                    ❯
+                  </button>
                   <div className="carousel-counter">
                     {currentImg + 1} / {images.length}
                   </div>
@@ -85,12 +108,17 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
 
           <div className="modal-body">
             <span className="modal-category">{categoryLabel}</span>
-            
+
             {/* --- BAGIAN JUDUL & LINK --- */}
             <div className="modal-title-row">
               <h2>{skill.title}</h2>
               {skill.link && (
-                <a href={skill.link} target="_blank" rel="noopener noreferrer" className="modal-link-btn">
+                <a
+                  href={skill.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-link-btn"
+                >
                   Details ↗
                 </a>
               )}

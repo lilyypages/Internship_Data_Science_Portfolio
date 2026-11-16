@@ -240,6 +240,24 @@ export const skillCategories: SkillCategory[] = [
             "/assets/project/DataAnalyst/Project3_Looker/commercial.png",
         ],
     },
+    { //FIXX
+        id: "bi-indonesia-employment-indicators",
+        title: "Dashboard Analisis Indikator Ketenagakerjaan di Indonesia (2022–2024)",
+        shortDesc: "Dashboard interaktif berbasis Microsoft Excel untuk memetakan persebaran pencari kerja, lowongan tersedia, dan penempatan tenaga kerja di 34 provinsi Indonesia.",
+        fullDesc: "Merancang dan mengembangkan dashboard interaktif berbasis Microsoft Excel untuk menganalisis indikator ketenagakerjaan di 34 provinsi di Indonesia selama periode 2022–2024[cite: 1]. Dashboard dilengkapi dengan KPI cards dinamis, peta spasial sebaran wilayah (Filled Map), pemeringkatan Top 10 Provinsi Tertinggi dan Terendah, analisis tren tahunan, komposisi rasio indikator (Donut Chart), serta perbandingan kesenjangan gender (Gender Gap) yang terintegrasi dengan slicer provinsi, tahun, jenis kelamin, dan kategori indikator serta halaman statistik deskriptif[cite: 1].",
+        tools: ["Excel", "PivotTable", "PivotChart", "Slicers", "Bing Maps"],
+        highlights: [
+            "Cakupan Data: 34 Provinsi di Indonesia (Periode 2022–2024) & Statistik Deskriptif[cite: 1]",
+            "Visualisasi Multi-Dimensi: Peta Spasial, Top/Bottom 10 Provinsi, Tren & Gender Gap[cite: 1]",
+            "Interaktivitas: Multi-Slicer (Provinsi, Tahun, Jenis Kelamin & Indikator Tenaga Kerja)[cite: 1]"
+        ],
+        problem: "Data indikator ketenagakerjaan antar-provinsi selama beberapa tahun bersifat tersebar dalam tabel angka statis, sehingga kesenjangan antara jumlah pencari kerja, ketersediaan lowongan, serta disparitas penempatan berdasarkan wilayah dan gender sulit dievaluasi secara cepat.",
+        solution: "Mengonsolidasikan data ketenagakerjaan menjadi model analisis terstruktur di Microsoft Excel dan menyusun dashboard interaktif dengan peta sebaran wilayah, grafik pemeringkatan provinsi, analisis tren serta gender gap, dan panel filter dinamis untuk eksplorasi data secara mandiri[cite: 1].",
+        image: "/assets/project/DataAnalyst/Project2_Excel/ketenagakerjaan.png", // <-- Muncul di card depan
+        gallery: [                                 // <-- Muncul di dalam modal (bisa digeser)
+            "/assets/project/DataAnalyst/Project2_Excel/ketenagakerjaan.png",
+        ],
+    },
       {
         id: "bi-kpi",
         title: "KPI Monitoring",
@@ -370,25 +388,74 @@ export const skillCategories: SkillCategory[] = [
       { name: "Git", iconUrl: "/assets/logo/Git-logo.png" },
     ],
     skills: [
-      {
-        id: "web-backend",
-        title: "Backend & REST API Development",
-        shortDesc: "API backend yang scalable dengan FastAPI/Flask/Django.",
-        fullDesc: "Membangun REST API menggunakan FastAPI, Flask, atau Django lengkap dengan autentikasi, validasi, dan dokumentasi endpoint.",
-        tools: ["FastAPI", "Flask", "Django", "Python", "Java"],
-        highlights: ["REST API scalable", "Autentikasi & validasi", "Dokumentasi endpoint"],
-        gallery: [                                // <-- Muncul di dalam modal (bisa digeser)
-          "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781984340/Screen_Recording_2026-06-21_023144_auix2e.mp4",
+      { // FIXX
+        id: "sipanda-learning-platform",
+        title: "SIPANDA – Integrated Learning Management Platform",
+        shortDesc:
+          "Platform manajemen pembelajaran yang menghubungkan siswa, guru, dan orang tua dalam satu ekosistem, dengan dasbor pembelajaran yang dipersonalisasi untuk memantau perkembangan siswa.",
+        fullDesc:
+          "SIPANDA adalah platform Learning Management System terintegrasi yang mempertemukan siswa, guru, dan orang tua dalam satu ekosistem digital. Guru dan orang tua dapat memantau perkembangan siswa melalui dasbor pembelajaran yang dipersonalisasi. Sistem dibangun menggunakan Node.js 20.x LTS, PostgreSQL 16, Redis 7 sebagai cache, dan Tailwind CSS v4, lalu dideploy menggunakan Nginx 1.24 dan Vercel, dengan pipeline CI/CD otomatis dari GitHub. Pengujian dilakukan melalui Postman dan unit test lokal, serta dilengkapi dokumentasi environment resources untuk tahap development, staging, dan production.",
+        tools: [
+          "Node.js 20.x LTS",
+          "PostgreSQL 16",
+          "Redis 7",
+          "Nginx 1.24",
+          "Tailwind CSS v4",
+          "Vercel",
+          "Neon",
+          "Git & GitHub",
+          "Postman",
         ],
+        highlights: [
+          "Architecture: Node.js 20.x LTS, PostgreSQL 16, Redis 7, Nginx 1.24, Tailwind CSS v4",
+          "Deployment: Vercel auto-deploy dari GitHub + environment terpisah (Development, Staging, Production)",
+          "Tooling: Postman (API testing), Neon (serverless PostgreSQL), Git branching strategy (main, develop, feature/*)",
+        ],
+        problem:
+          "Proses pemantauan pembelajaran siswa masih tersebar dan tidak terintegrasi antar pemangku kepentingan, sehingga guru dan orang tua kesulitan memantau perkembangan siswa secara real-time dan terpusat.",
+        solution:
+          "Membangun platform Learning Management System terintegrasi (SIPANDA) berbasis Node.js 20.x LTS dan PostgreSQL 16 dengan Redis 7 sebagai cache, dilengkapi dasbor pembelajaran yang dipersonalisasi, serta pipeline deployment otomatis via Vercel dan environment terpisah (Development, Staging, Production) dengan Nginx 1.24 sebagai web server.",
+        image: "/assets/project/WebDev/overview1.png", // <-- Muncul di card depan
+        gallery: [
+          "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781984340/Screen_Recording_2026-06-21_023144_auix2e.mp4",
+          "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781984338/Screen_Recording_2026-06-21_023327_gnq4ht.mp4",
+          "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781984338/Screen_Recording_2026-06-21_023556_ks9z2w.mp4",
+          "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781984323/Screen_Recording_2026-06-21_023717_b1syq7.mp4",
+        ],
+        link: "https://drive.google.com/file/d/1zzuZuAlbGd42ozWmQjB-MlHGWyUmCFcf/view?usp=drive_link",
       },
-      {
-        id: "web-fullstack",
-        title: "Full-Stack Web Application",
-        shortDesc: "Aplikasi web full-stack dari frontend hingga backend.",
-        fullDesc: "Membangun aplikasi web full-stack dengan frontend HTML/CSS/JS, backend Python/Java, serta integrasi database dan autentikasi.",
-        tools: ["HTML/CSS/JS", "Python", "FastAPI", "Django"],
-        highlights: ["Frontend & backend terintegrasi", "Integrasi database", "Auth pengguna"],
-      },
+      { // FIXX
+  id: "agrotwin-tomato-expert-system",
+  title: "AgroTwin – Smart Assistant for Tomato Plant Care",
+  shortDesc:
+    "Sistem Digital Twin berbasis AI Reasoning (Sistem Pakar) untuk diagnosis dan rekomendasi budidaya tomat yang cerdas, holistik, dan transparan.",
+  fullDesc:
+    "AgroTwin adalah platform Digital Twin pertanian berbasis AI Reasoning (Sistem Pakar) yang membantu pengguna memantau kesehatan tanaman tomat serta mengidentifikasi potensi penyakit. Sistem mengintegrasikan data simulasi lingkungan (pH tanah, suhu, kelembapan) dengan gejala visual tanaman menggunakan algoritma Forward Chaining untuk penalaran logis dan metode Certainty Factor (CF) untuk mengelola ketidakpastian data gejala di lapangan. Hasilnya adalah antarmuka Digital Twin yang menampilkan diagnosis hama & penyakit dengan tingkat keyakinan terukur, serta rekomendasi perawatan yang explainable (dapat dijelaskan alasan logisnya) berdasarkan penelitian pertanian dan pengetahuan ahli. Dikembangkan dengan metode Design Science Research, AgroTwin berpotensi menjadi asisten cerdas yang efektif untuk mencegah kegagalan panen dan mengoptimalkan sumber daya melalui pendekatan pertanian presisi.",
+  tools: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Forward Chaining",
+    "Certainty Factor (CF)",
+    "AI Reasoning",
+    "Digital Twin",
+  ],
+  highlights: [
+    "Method: Design Science Research + AI Reasoning (Sistem Pakar)",
+    "Reasoning: Forward Chaining & Certainty Factor (CF) untuk kelola ketidakpastian gejala",
+    "Feature: Diagnosis penyakit dengan confidence score + rekomendasi explainable (Digital Twin)",
+  ],
+  problem:
+    "Produktivitas tomat nasional masih jauh di bawah potensi idealnya akibat kompleksitas manajemen lingkungan mikro dan serangan Organisme Pengganggu Tanaman (OPT). Teknologi pertanian yang ada memiliki keterbatasan: sistem IoT umumnya hanya berfungsi sebagai alat pemantauan (monitoring), sedangkan AI berbasis Deep Learning seringkali bersifat black box sehingga sulit dipahami alasannya oleh petani.",
+  solution:
+    "Merancang AgroTwin, sebuah sistem Digital Twin pertanian berbasis AI Reasoning (Sistem Pakar) yang mengintegrasikan data simulasi lingkungan (pH tanah, suhu, kelembapan) dengan gejala visual tanaman. Menggunakan algoritma Forward Chaining untuk penalaran logis dan Certainty Factor (CF) untuk mengelola ketidakpastian data gejala, sehingga menghasilkan diagnosis dengan tingkat keyakinan terukur dan rekomendasi perawatan yang explainable.",
+  image: "/assets/project/WebDev/overview2.png", // <-- Muncul di card depan
+  gallery: [
+    "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781942459/Screen_Recording_2026-06-20_145105_ep4afi.mp4",
+    "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781942506/Screen_Recording_2026-06-20_145930_vqwoch.mp4",
+  ],
+  link: "https://drive.google.com/file/d/1Fdpb-KRso9ZkPT6BCoYN_-vPsgmTRyM_/view?usp=sharing",
+},
       {
         id: "web-deploy",
         title: "System & Model Deployment (CI/CD)",
