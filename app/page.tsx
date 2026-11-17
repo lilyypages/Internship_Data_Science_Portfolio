@@ -31,7 +31,7 @@ const teamMembers = [
     desc: "Berfokus pada analisis dan visualisasi data yang dipadukan dengan eksplorasi UI design. Mampu mengubah data mentah menjadi sajian visual yang fungsional, logis, sekaligus memiliki nilai estetika tinggi.",
     image: "/assets/team/member_04.jpg",
     linkedin: "https://www.linkedin.com/in/violaherfina",
-    cv: "/assets/cv/CVATSViola.pdf",
+    cv: "/assets/cv/CVATSVio.pdf",
   },
   {
     name: "Dhea Meidiyana Windawati",
