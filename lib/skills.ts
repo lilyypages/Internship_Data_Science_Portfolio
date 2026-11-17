@@ -22,7 +22,6 @@ export type SkillCategory = {
   index: string;
   label: string;
   title: string;
-  titleEm: string;
   description: string;
   coreCapabilities: string[];
   tools: Tool[];
@@ -34,8 +33,7 @@ export const skillCategories: SkillCategory[] = [
     id: "data-science-ai",
     index: "01",
     label: "DATA SCIENCE & AI",
-    title: "Data Science",
-    titleEm: "& AI",
+    title: "Data Science & AI",
     description: "Membangun model prediktif, eksperimen statistik, dan prototipe AI untuk menyelesaikan masalah nyata.",
     coreCapabilities: [
       "Machine Learning & Deep Learning",
@@ -62,7 +60,7 @@ export const skillCategories: SkillCategory[] = [
         highlights: ["Data: PlantVillage (Kaggle) dan data cuaca BMKG", "Model: CNN (ResNet-18, MobileNetV2), MLP, dan fusi fitur", "Evaluasi: F1-score, uji Shapiro-Wilk, dan paired one-tailed t-test "],        
         problem: "Penyakit daun tomat sulit dibedakan secara visual jika hanya mengandalkan citra daun saja, sehingga sering berisiko salah diagnosis dan menurunkan hasil panen.",
         solution: "Mengembangkan arsitektur multimodal yang memadukan CNN dengan variabel lingkungan (suhu dan kelembapan) untuk meningkatkan akurasi diagnosis, terbukti menaikkan F1-score secara signifikan dari 0.8711 ke 0.9646.",
-        image: "/assets/project/DataScience/Project1_Anin/PPT Kecerdasan Buatan-1.png", // <-- Muncul di card depan
+        image: "/assets/project/DataScience/Project1_Anin/PPT Kecerdasan Buatan-2.png", // <-- Muncul di card depan
         gallery: [                                // <-- Muncul di dalam modal (bisa digeser)
           "/assets/project/DataScience/Project1_Anin/PPT Kecerdasan Buatan-1.png",
           "/assets/project/DataScience/Project1_Anin/PPT Kecerdasan Buatan-2.png",
@@ -88,7 +86,7 @@ export const skillCategories: SkillCategory[] = [
         ],
         problem: "Menelusuri pasal spesifik dalam regulasi Pelindungan Data Pribadi secara manual memakan waktu, sementara penggunaan LLM generik tanpa grounding rentan mengalami halusinasi dan tidak menyertakan dasar hukum yang valid.",
         solution: "Membangun pipeline RAG yang menggabungkan pencarian semantik pada LanceDB dengan Google Gemini API untuk menghasilkan jawaban hukum yang akurat lengkap dengan sitasi inline pasal terkait, lalu menyajikannya dalam aplikasi web terkontainerisasi (Docker) di cloud.",
-        image: "/assets/project/DataScience/Project2_Lois/NLP_RAG_1.png", // <-- Muncul di card depan
+        image: "/assets/project/DataScience/Project2_Lois/NLP_RAG_2.png", // <-- Muncul di card depan
         gallery: [                                 // <-- Muncul di dalam modal (bisa digeser)
           "/assets/project/DataScience/Project2_Lois/NLP_RAG_1.png",
           "/assets/project/DataScience/Project2_Lois/NLP_RAG_2.png",
@@ -112,7 +110,7 @@ export const skillCategories: SkillCategory[] = [
         ],
         problem: "Pola pembelian produk secara bersamaan dalam transaksi e-commerce semakin kompleks, sementara penyajian aturan asosiasi dalam bentuk tabel atau matriks mentah sulit dipahami secara intuitif untuk melihat keterkaitan antar-item.",
         solution: "Menerapkan algoritma FP-Growth untuk mengekstrak pola asosiasi frekuensi tinggi secara efisien dan memvisualisasikannya sebagai network graph interaktif agar klaster produk tematik, item kunci, dan peluang bundling terlihat jelas.",
-        image: "/assets/project/DataScience/Project3_Anin/PPT Matematika Diskrit-1.png", // <-- Muncul di card depan
+        image: "/assets/project/DataScience/Project3_Anin/PPT Matematika Diskrit-4.png", // <-- Muncul di card depan
         gallery: [                                 // <-- Muncul di dalam modal (bisa digeser)
           "/assets/project/DataScience/Project3_Anin/PPT Matematika Diskrit-1.png",
           "/assets/project/DataScience/Project3_Anin/PPT Matematika Diskrit-2.png",
@@ -146,8 +144,7 @@ export const skillCategories: SkillCategory[] = [
     id: "data-analytics-bi",
     index: "02",
     label: "DATA ANALYTICS & BI",
-    title: "Data Analytics",
-    titleEm: "& Business Intelligence",
+    title: "Data Analytics & Business Intelligence",
     description: "Mengubah data menjadi insight bisnis dan dashboard interaktif untuk mendukung keputusan.",
     coreCapabilities: [
       "Data Cleaning & Preprocessing",
@@ -169,7 +166,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { // FIXX
         id: "bi-agriflow-dashboard",
-        title: "AgriFlow BI: Dashboard Monitoring & Analisis Distribusi Pupuk Bersubsidi Nasional",
+        title: "Analisis Distribusi Pupuk Bersubsidi Nasional",
         shortDesc: "Penyusunan dashboard interaktif Power BI dengan kapabilitas drill-through multi-level (nasional hingga kecamatan) untuk memantau serapan dan ketidaksesuaian distribusi pupuk.",
         fullDesc: "Mengembangkan solusi Business Intelligence menggunakan Power BI yang terhubung dengan model tabular SSAS (DAX measures) untuk memvisualisasikan performa distribusi dan penebusan pupuk bersubsidi di seluruh Indonesia. Dashboard mencakup hierarki wilayah terpadu (34 provinsi, 474 kab/kota, 4.724 kecamatan, hingga 8.266 kelurahan) yang memungkinkan analisis granular terhadap capaian target, persentase penerimaan, disparitas serapan antar-provinsi, identifikasi pengecer penghambat, serta komposisi jenis pupuk.",
         tools: ["Power BI", "DAX", "SSAS Tabular", "SQL Server"],
@@ -190,7 +187,7 @@ export const skillCategories: SkillCategory[] = [
     },
       { // FIXX
         id: "bi-eda",
-        title: "Analisis & Visualisasi Data Pendidikan Makro di Indonesia Periode 2022 - 2024",
+        title: "Data Pendidikan Makro di Indonesia Periode 2022 - 2024",
         shortDesc: "Penyusunan dashboard interaktif dan geo-mapping menggunakan teknik Advanced Excel Pivoting untuk mengorelasikan kuantitas infrastruktur sekolah dengan mutu pendidikan nasional.",
         fullDesc: "Analisis dan visualisasi data pendidikan makro Indonesia (2022–2024) menggunakan Microsoft Excel untuk mengintegrasikan data infrastruktur sekolah (SD, SMP, SMA/SMK) dan indikator mutu (HLS & RLS) di 38 provinsi ke dalam sebuah Interactive Dashboard.",
         tools: ["Excel", "PivotTable, PivotChart, Power Query"],
@@ -242,7 +239,7 @@ export const skillCategories: SkillCategory[] = [
     },
     { //FIXX
         id: "bi-indonesia-employment-indicators",
-        title: "Dashboard Analisis Indikator Ketenagakerjaan di Indonesia (2022–2024)",
+        title: "Analisis Indikator Ketenagakerjaan di Indonesia (2022–2024)",
         shortDesc: "Dashboard interaktif berbasis Microsoft Excel untuk memetakan persebaran pencari kerja, lowongan tersedia, dan penempatan tenaga kerja di 34 provinsi Indonesia.",
         fullDesc: "Merancang dan mengembangkan dashboard interaktif berbasis Microsoft Excel untuk menganalisis indikator ketenagakerjaan di 34 provinsi di Indonesia selama periode 2022–2024[cite: 1]. Dashboard dilengkapi dengan KPI cards dinamis, peta spasial sebaran wilayah (Filled Map), pemeringkatan Top 10 Provinsi Tertinggi dan Terendah, analisis tren tahunan, komposisi rasio indikator (Donut Chart), serta perbandingan kesenjangan gender (Gender Gap) yang terintegrasi dengan slicer provinsi, tahun, jenis kelamin, dan kategori indikator serta halaman statistik deskriptif[cite: 1].",
         tools: ["Excel", "PivotTable", "PivotChart", "Slicers", "Bing Maps"],
@@ -272,8 +269,7 @@ export const skillCategories: SkillCategory[] = [
     id: "big-data-engineering",
     index: "03",
     label: "BIG DATA & DATA ENGINEERING",
-    title: "Big Data",
-    titleEm: "& Data Engineering",
+    title: "Big Data & Data Engineering",
     description: "Membangun pipeline data, integrasi, dan infrastruktur big data yang andal.",
     coreCapabilities: [
       "ETL / ELT Pipeline Development",
@@ -341,13 +337,29 @@ export const skillCategories: SkillCategory[] = [
         ],
         link: "https://drive.google.com/drive/folders/1Og4WpXHjw-7cJWgLW8QMUIaaqAWphXst?usp=drive_link",
       },
-      {
-        id: "de-quality",
-        title: "Data Validation & Quality Assurance",
-        shortDesc: "Validasi & QA data untuk menjaga kualitas.",
-        fullDesc: "Menerapkan validasi skema, pengecekan duplikasi, null, dan anomali, serta monitoring kualitas data agar hasil analisis tetap terpercaya.",
-        tools: ["Python", "SQL", "Airflow"],
-        highlights: ["Validasi skema & tipe data", "Deteksi anomali & duplikasi", "Monitoring kualitas data"],
+{ // FXX
+        id: "ds-realtime-affective-analysis",
+        title: "Realtime Affective Analysis: Pipeline Streaming & Klasifikasi Sentimen-Emosi Ulasan E-Commerce",
+        shortDesc: "Implementasi Pipeline Big Data untuk Monitoring Sentimen dan Emosi Ulasan Produk Toko ASUS Official Shop di Shopee Secara Real-Time.",
+        fullDesc: "Membangun alur pemrosesan data streaming otomatis yang mengambil ulasan baru secara real-time menggunakan arsitektur CDC (MongoDB, Debezium, Apache Kafka) dan Spark Structured Streaming untuk mengklasifikasikan sentimen serta emosi menggunakan model Logistic Regression (TF-IDF, SMOTE). Hasil klasifikasi disimpan ke PostgreSQL, divisualisasikan melalui dashboard interaktif Streamlit & Plotly, serta memicu peringatan otomatis via Telegram Bot API saat terdeteksi ulasan negatif. Sistem juga mencatat versi model aktif agar metrik evaluasi (macro F1 sentimen 0,92 dan emosi 0,58) tetap selaras dengan artefak yang berjalan.",
+        tools: ["Python", "Apache Kafka", "Spark Structured Streaming", "MongoDB", "Debezium", "PostgreSQL", "scikit-learn", "Streamlit", "Plotly", "Telegram Bot API", "Docker Compose"],
+        highlights: [
+          "Data & Streaming: MongoDB CDC (Debezium), Apache Kafka, & Spark Structured Streaming",
+          "Model: Logistic Regression (TF-IDF 1500 fitur, SMOTE) — Macro F1 Sentimen 0,92 & Emosi 0,58",
+          "Output & Deployment: PostgreSQL, Dashboard Streamlit & Plotly, Notifikasi Telegram Bot API, & Docker Compose"
+        ],
+        problem: "Ulasan produk toko di marketplace datang terus-menerus dalam volume tinggi sehingga terlalu banyak dan lambat jika dipantau secara manual, serta rawan ketidaksesuaian antara versi model yang dievaluasi dengan artefak yang berjalan di produksi.",
+        solution: "Membangun pipeline Big Data end-to-end berbasis CDC dan Spark Structured Streaming untuk klasifikasi sentimen-emosi real-time, dilengkapi pencatatan versi model aktif, visualisasi dashboard Streamlit, dan notifikasi peringatan instan melalui Telegram Bot API.",
+        image: "/assets/project/BigData/Project3_Yuda/lampiran4.png", // <-- Muncul di card depan
+        gallery: [                                                 // <-- Muncul di dalam modal (bisa digeser)
+          "/assets/project/BigData/Project3_Yuda/lampiran1.png",
+          "/assets/project/BigData/Project3_Yuda/lampiran2.png",
+          "/assets/project/BigData/Project3_Yuda/lampiran3.png",
+          "/assets/project/BigData/Project3_Yuda/lampiran4.png",
+          "/assets/project/BigData/Project3_Yuda/lampiran5.png",
+          "/assets/project/BigData/Project3_Yuda/lampiran6.png",
+        ],
+        link: "https://drive.google.com/drive/folders/1FnB4jxkW6x4Ii1gUPOSJkXQKsJW6JTal?usp=drive_link",
       },
       {
         id: "de-stream",
@@ -371,8 +383,7 @@ export const skillCategories: SkillCategory[] = [
     id: "web-app-dev",
     index: "04",
     label: "WEB & APPLICATION DEVELOPMENT",
-    title: "Web & App",
-    titleEm: "Development",
+    title: "Web & App Development",
     description: "Membangun aplikasi web full-stack, API, dan deployment model/sistem.",
     coreCapabilities: [
       "Backend & REST API Development",

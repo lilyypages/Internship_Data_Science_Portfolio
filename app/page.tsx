@@ -108,8 +108,7 @@ export default function Home() {
             </div>
 
             <p className="hero-description">
-              Exploring data, engineering solutions, and transforming ideas into
-              meaningful impact.
+              Bridging data, technology, and innovation through real-world projects.
             </p>
 
             <a href="#about" className="primary-button">
@@ -127,9 +126,9 @@ export default function Home() {
               <br />
               complex data
               <br />
-              into actionable
+              into meaningful
               <br />
-              <em>insights.</em>
+              decisions.
             </h2>
             <div className="hero-caption">
               MAGANG BERDAMPAK
@@ -237,7 +236,7 @@ export default function Home() {
                   {cat.index} — {cat.label}
                 </span>
                 <h2>
-                  {cat.title} <em>{cat.titleEm}</em>
+                  {cat.title} 
                 </h2>
                 <p>{cat.description}</p>
               </div>
