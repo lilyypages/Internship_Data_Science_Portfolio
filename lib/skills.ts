@@ -122,22 +122,6 @@ export const skillCategories: SkillCategory[] = [
         ],
         link: "https://drive.google.com/drive/folders/1VYYmPvtNRJECX0M-YZL-sak1VVrVPHf6?usp=drive_link",
       },
-      {
-        id: "ds-stat",
-        title: "Statistical Modeling & Hypothesis Testing",
-        shortDesc: "Analisis statistik untuk validasi insight dan pengujian hipotesis.",
-        fullDesc: "Menerapkan uji statistik (t-test, chi-square, ANOVA) dan pemodelan statistik untuk memvalidasi insight sebelum dijadikan dasar keputusan.",
-        tools: ["Python", "R", "Statsmodels", "SciPy"],
-        highlights: ["Uji hipotesis (t-test, ANOVA)", "Pemodelan statistik", "Validasi insight berbasis data"],
-      },
-      {
-        id: "ds-prototyping",
-        title: "AI Prototyping",
-        shortDesc: "Prototipe AI cepat untuk validasi ide dan demo solusi.",
-        fullDesc: "Membangun prototipe AI menggunakan Streamlit dan notebook eksperimen untuk validasi ide, demo ke stakeholder, dan iterasi cepat.",
-        tools: ["Streamlit", "Python", "Jupyter"],
-        highlights: ["Prototipe interaktif dengan Streamlit", "Eksperimen cepat di notebook", "Demo solusi ke stakeholder"],
-      },
     ],
   },
   {
@@ -255,14 +239,6 @@ export const skillCategories: SkillCategory[] = [
             "/assets/project/DataAnalyst/Project2_Excel/ketenagakerjaan.png",
         ],
     },
-      {
-        id: "bi-kpi",
-        title: "KPI Monitoring",
-        shortDesc: "Pemantauan KPI untuk mendukung keputusan berbasis data.",
-        fullDesc: "Mendefinisikan, memantau, dan mengevaluasi KPI bisnis lewat dashboard dan report rutin agar stakeholder bisa mengambil keputusan berbasis data.",
-        tools: ["Power BI", "Tableau", "Excel", "SQL"],
-        highlights: ["Definisi & tracking KPI", "Report rutin", "Keputusan berbasis data"],
-      },
     ],
   },
   {
@@ -361,22 +337,6 @@ export const skillCategories: SkillCategory[] = [
         ],
         link: "https://drive.google.com/drive/folders/1FnB4jxkW6x4Ii1gUPOSJkXQKsJW6JTal?usp=drive_link",
       },
-      {
-        id: "de-stream",
-        title: "Big Data Processing & Real-Time Streaming",
-        shortDesc: "Pemrosesan big data & streaming real-time.",
-        fullDesc: "Memproses data skala besar menggunakan Spark & Hadoop, serta streaming real-time dengan Kafka untuk insight yang cepat.",
-        tools: ["Apache Spark", "Hadoop", "Apache Kafka"],
-        highlights: ["Pemrosesan skala besar", "Streaming real-time", "Insight cepat"],
-      },
-      {
-        id: "de-dba",
-        title: "Database Administration",
-        shortDesc: "Administrasi database: performance, backup, & reliability.",
-        fullDesc: "Mengelola database (PostgreSQL, MySQL, SQL Server, Cassandra), termasuk tuning performa, backup, dan reliability.",
-        tools: ["PostgreSQL", "MySQL", "SQL Server", "Cassandra", "Docker"],
-        highlights: ["Tuning performa", "Backup & restore", "Reliability database"],
-      },
     ],
   },
   {
@@ -436,53 +396,67 @@ export const skillCategories: SkillCategory[] = [
         link: "https://drive.google.com/file/d/1zzuZuAlbGd42ozWmQjB-MlHGWyUmCFcf/view?usp=drive_link",
       },
       { // FIXX
-  id: "agrotwin-tomato-expert-system",
-  title: "AgroTwin – Smart Assistant for Tomato Plant Care",
-  shortDesc:
-    "Sistem Digital Twin berbasis AI Reasoning (Sistem Pakar) untuk diagnosis dan rekomendasi budidaya tomat yang cerdas, holistik, dan transparan.",
-  fullDesc:
-    "AgroTwin adalah platform Digital Twin pertanian berbasis AI Reasoning (Sistem Pakar) yang membantu pengguna memantau kesehatan tanaman tomat serta mengidentifikasi potensi penyakit. Sistem mengintegrasikan data simulasi lingkungan (pH tanah, suhu, kelembapan) dengan gejala visual tanaman menggunakan algoritma Forward Chaining untuk penalaran logis dan metode Certainty Factor (CF) untuk mengelola ketidakpastian data gejala di lapangan. Hasilnya adalah antarmuka Digital Twin yang menampilkan diagnosis hama & penyakit dengan tingkat keyakinan terukur, serta rekomendasi perawatan yang explainable (dapat dijelaskan alasan logisnya) berdasarkan penelitian pertanian dan pengetahuan ahli. Dikembangkan dengan metode Design Science Research, AgroTwin berpotensi menjadi asisten cerdas yang efektif untuk mencegah kegagalan panen dan mengoptimalkan sumber daya melalui pendekatan pertanian presisi.",
-  tools: [
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Forward Chaining",
-    "Certainty Factor (CF)",
-    "AI Reasoning",
-    "Digital Twin",
-  ],
-  highlights: [
-    "Method: Design Science Research + AI Reasoning (Sistem Pakar)",
-    "Reasoning: Forward Chaining & Certainty Factor (CF) untuk kelola ketidakpastian gejala",
-    "Feature: Diagnosis penyakit dengan confidence score + rekomendasi explainable (Digital Twin)",
-  ],
-  problem:
-    "Produktivitas tomat nasional masih jauh di bawah potensi idealnya akibat kompleksitas manajemen lingkungan mikro dan serangan Organisme Pengganggu Tanaman (OPT). Teknologi pertanian yang ada memiliki keterbatasan: sistem IoT umumnya hanya berfungsi sebagai alat pemantauan (monitoring), sedangkan AI berbasis Deep Learning seringkali bersifat black box sehingga sulit dipahami alasannya oleh petani.",
-  solution:
-    "Merancang AgroTwin, sebuah sistem Digital Twin pertanian berbasis AI Reasoning (Sistem Pakar) yang mengintegrasikan data simulasi lingkungan (pH tanah, suhu, kelembapan) dengan gejala visual tanaman. Menggunakan algoritma Forward Chaining untuk penalaran logis dan Certainty Factor (CF) untuk mengelola ketidakpastian data gejala, sehingga menghasilkan diagnosis dengan tingkat keyakinan terukur dan rekomendasi perawatan yang explainable.",
-  image: "/assets/project/WebDev/overview2.png", // <-- Muncul di card depan
-  gallery: [
-    "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781942459/Screen_Recording_2026-06-20_145105_ep4afi.mp4",
-    "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781942506/Screen_Recording_2026-06-20_145930_vqwoch.mp4",
-  ],
-  link: "https://drive.google.com/file/d/1Fdpb-KRso9ZkPT6BCoYN_-vPsgmTRyM_/view?usp=sharing",
-},
-      {
-        id: "web-deploy",
-        title: "System & Model Deployment (CI/CD)",
-        shortDesc: "Deploy model & sistem dengan CI/CD.",
-        fullDesc: "Mendeploy model & sistem ke cloud (Azure App Service) dengan pipeline CI/CD di Azure DevOps dan container Docker.",
-        tools: ["Docker", "Git", "Azure App Service", "Azure DevOps"],
-        highlights: ["Deploy ke Azure", "Pipeline CI/CD", "Containerization"],
-      },
-      {
-        id: "web-db-auth",
-        title: "Database Integration & Auth",
-        shortDesc: "Integrasi database & autentikasi aplikasi.",
-        fullDesc: "Mengintegrasikan database ke aplikasi web beserta sistem autentikasi & otorisasi pengguna.",
-        tools: ["SQL", "FastAPI", "Django", "Docker"],
-        highlights: ["Integrasi database", "Autentikasi & otorisasi", "Sesi pengguna aman"],
-      },
+      id: "agrotwin-tomato-expert-system",
+      title: "AgroTwin – Smart Assistant for Tomato Plant Care",
+      shortDesc:
+        "Sistem Digital Twin berbasis AI Reasoning (Sistem Pakar) untuk diagnosis dan rekomendasi budidaya tomat yang cerdas, holistik, dan transparan.",
+      fullDesc:
+        "AgroTwin adalah platform Digital Twin pertanian berbasis AI Reasoning (Sistem Pakar) yang membantu pengguna memantau kesehatan tanaman tomat serta mengidentifikasi potensi penyakit. Sistem mengintegrasikan data simulasi lingkungan (pH tanah, suhu, kelembapan) dengan gejala visual tanaman menggunakan algoritma Forward Chaining untuk penalaran logis dan metode Certainty Factor (CF) untuk mengelola ketidakpastian data gejala di lapangan. Hasilnya adalah antarmuka Digital Twin yang menampilkan diagnosis hama & penyakit dengan tingkat keyakinan terukur, serta rekomendasi perawatan yang explainable (dapat dijelaskan alasan logisnya) berdasarkan penelitian pertanian dan pengetahuan ahli. Dikembangkan dengan metode Design Science Research, AgroTwin berpotensi menjadi asisten cerdas yang efektif untuk mencegah kegagalan panen dan mengoptimalkan sumber daya melalui pendekatan pertanian presisi.",
+      tools: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Forward Chaining",
+        "Certainty Factor (CF)",
+        "AI Reasoning",
+        "Digital Twin",
+      ],
+      highlights: [
+        "Method: Design Science Research + AI Reasoning (Sistem Pakar)",
+        "Reasoning: Forward Chaining & Certainty Factor (CF) untuk kelola ketidakpastian gejala",
+        "Feature: Diagnosis penyakit dengan confidence score + rekomendasi explainable (Digital Twin)",
+      ],
+      problem:
+        "Produktivitas tomat nasional masih jauh di bawah potensi idealnya akibat kompleksitas manajemen lingkungan mikro dan serangan Organisme Pengganggu Tanaman (OPT). Teknologi pertanian yang ada memiliki keterbatasan: sistem IoT umumnya hanya berfungsi sebagai alat pemantauan (monitoring), sedangkan AI berbasis Deep Learning seringkali bersifat black box sehingga sulit dipahami alasannya oleh petani.",
+      solution:
+        "Merancang AgroTwin, sebuah sistem Digital Twin pertanian berbasis AI Reasoning (Sistem Pakar) yang mengintegrasikan data simulasi lingkungan (pH tanah, suhu, kelembapan) dengan gejala visual tanaman. Menggunakan algoritma Forward Chaining untuk penalaran logis dan Certainty Factor (CF) untuk mengelola ketidakpastian data gejala, sehingga menghasilkan diagnosis dengan tingkat keyakinan terukur dan rekomendasi perawatan yang explainable.",
+      image: "/assets/project/WebDev/overview2.png", // <-- Muncul di card depan
+      gallery: [
+        "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781942459/Screen_Recording_2026-06-20_145105_ep4afi.mp4",
+        "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781942506/Screen_Recording_2026-06-20_145930_vqwoch.mp4",
+      ],
+      link: "https://drive.google.com/file/d/1Fdpb-KRso9ZkPT6BCoYN_-vPsgmTRyM_/view?usp=sharing",
+    },
+    { // FIXX
+      id: "watch-id-film-platform",
+      title: "Watch.id – Film & TV Show Information Platform",
+      shortDesc:
+        "Platform informasi film dan TV show berbasis IMDb dataset dengan arsitektur database multi-stage, Full-Text Search, dan Role-Based Access Control (RBAC).",
+      fullDesc:
+        "Watch.id adalah platform informasi film dan acara televisi berbasis web yang mengelola ribuan data hiburan dari dataset IMDb melalui pendekatan Role-Based Access Control (RBAC). Sistem membagi alur kerja secara terstruktur ke dalam tiga peran utama: Bagian Produksi untuk input dan revisi data, Executive untuk validasi serta kontrol publikasi (Publish/Unpublish), dan User Publik untuk akses read-only. Dibangun dengan arsitektur basis data multi-stage (BRIDGE, INTEGRATED, APP) di SQL Server, sistem ini menerapkan normalisasi data, Full-Text Search (FTS), serta stored procedure berformat JSON agar dapat dikonsumsi secara cepat dan responsif oleh frontend Next.js.",
+      tools: [
+        "Next.js",
+        "SQL Server",
+        "Full-Text Search (FTS)",
+        "Stored Procedure (JSON)",
+        "RBAC",
+        "Database Normalization",
+      ],
+      highlights: [
+        "Architecture: Multi-Stage Database (BRIDGE, INTEGRATED, APP) di SQL Server",
+        "Access Control: RBAC dengan alur kerja terpisah untuk Produksi, Executive, dan User Publik",
+        "Performance: Implementasi Full-Text Search (FTS), pagination, dan output JSON via Stored Procedure",
+      ],
+      problem:
+        "Pengelolaan data film dan acara televisi dalam skala besar rentan terhadap redundansi data mentah, inkonsistensi atribut, serta risiko kesalahan publikasi akibat belum terpisahnya tanggung jawab antara tim input data, validator, dan pengguna publik.",
+      solution:
+        "Merancang sistem basis data multi-stage di SQL Server (BRIDGE, INTEGRATED, APP) untuk normalisasi data dan pemisahan logika aplikasi, dilengkapi Role-Based Access Control (RBAC) untuk alur validasi publikasi serta Full-Text Search dan stored procedure JSON untuk pencarian cepat di antarmuka Next.js.",
+      image: "/assets/project/WebDev/overview3.png", // <-- Sesuaikan path gambar card depan
+      gallery: [
+        "https://res.cloudinary.com/dikbaiqql/video/upload/f_auto,q_auto/v1781934961/Screen_Recording_2025-12-30_220634_de7xnq.mp4",
+      ],
+      link: "", // <-- Isi link laporan/repo jika ada
+    },
     ],
   },
 ];
