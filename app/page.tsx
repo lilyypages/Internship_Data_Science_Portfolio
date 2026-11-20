@@ -316,7 +316,7 @@ export default function Home() {
             data <em>matter.</em>
           </h2>
           <p>We are ready to learn, collaborate, and create something impactful together.</p>
-          <a href="mailto:talithasukma@student.uns.ac.id" className="primary-button">
+          <a href="mailto:yudafihan@student.uns.ac.id" className="primary-button">
             WORK WITH US ↗
           </a>
           <div className="closing-footer">
