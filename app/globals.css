@@ -35,6 +35,8 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-0);
+  overscroll-behavior: none;
 }
 
 body {
@@ -799,6 +801,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 10px 4px 24px;
