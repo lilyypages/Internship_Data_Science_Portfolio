@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import type { Skill } from "@/lib/skills";
 
 type Props = {
@@ -89,10 +90,14 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
                   playsInline
                 />
               ) : (
-                <img
+                <Image
+                  key={images[currentImg]}
                   src={images[currentImg]}
                   alt={`${skill.title} - ${currentImg + 1}`}
                   className="carousel-image"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 900px"
+                  quality={85}
                 />
               )}
 

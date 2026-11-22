@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import SkillModal from "./components/SkillModal";
 import { skillCategories, type Skill } from "@/lib/skills";
 
@@ -200,7 +201,14 @@ export default function Home() {
           {teamMembers.map((m) => (
             <article className="member-card" key={m.name}>
               <div className="member-photo">
-                <img src={m.image} alt={m.name} />
+                <Image
+                  src={m.image}
+                  alt={m.name}
+                  width={480}
+                  height={176}
+                  sizes="(max-width: 600px) 85vw, (max-width: 900px) 48vw, 300px"
+                  loading="lazy"
+                />
               </div>
               <div className="member-info">
                 <h3>{m.name}</h3>
@@ -256,6 +264,8 @@ export default function Home() {
                 <img 
                   src={tool.iconUrl} 
                   alt={tool.name} 
+                  loading="lazy"
+                  decoding="async"
                   style={{ 
                     height: '22px', 
                     width: 'auto', 
@@ -283,7 +293,14 @@ export default function Home() {
                   {/* Bagian Gambar */}
                   <div className="project-image">
                     {skill.image ? (
-                      <img src={skill.image} alt={skill.title} />
+                      <Image
+                        src={skill.image}
+                        alt={skill.title}
+                        fill
+                        sizes="(max-width: 600px) 85vw, (max-width: 900px) 48vw, 32vw"
+                        style={{ objectFit: "cover" }}
+                        loading="lazy"
+                      />
                     ) : (
                       <div className="visual-placeholder">
                         {String(i + 1).padStart(2, "0")}
