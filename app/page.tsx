@@ -63,7 +63,7 @@ export default function Home() {
       {/* NAVIGATION */}
       <header className="navbar">
         <div className="container navbar-inner">
-          <a href="#" className="logo">
+          <a href="#home" className="logo">
             DATA SCIENCE
           </a>
           <nav>
@@ -296,7 +296,12 @@ export default function Home() {
                     <span>PROJECT {String(i + 1).padStart(2, "0")}</span>
                     <h3>{skill.title}</h3>
                     <p>{skill.shortDesc}</p>
-                    <a href="#">View Details ↗</a>
+                    <a
+                      href="#"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      View Details ↗
+                    </a>
                   </div>
                 </article>
               ))}
@@ -309,9 +314,9 @@ export default function Home() {
       {/* CLOSING */}
       <section className="closing" id="contact">
         <div className="container">
-          <span className="section-label">LET'S COLLABORATE</span>
+          <span className="section-label">LET&apos;S COLLABORATE</span>
           <h2>
-            Let's make
+            Let&apos;s make
             <br />
             data <em>matter.</em>
           </h2>
@@ -329,7 +334,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <div className="container footer-inner">
-          <a href="#" className="logo">DATA SCIENCE</a>
+          <a href="#home" className="logo">DATA SCIENCE</a>
           <span>Built with curiosity &amp; purpose.</span>
           <a href="#home">BACK TO TOP ↑</a>
         </div>
