@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import SkillModal from "./components/SkillModal";
 import { skillCategories, type Skill } from "@/lib/skills";
 
@@ -63,7 +64,7 @@ export default function Home() {
       {/* NAVIGATION */}
       <header className="navbar">
         <div className="container navbar-inner">
-          <a href="#" className="logo">
+          <a href="#home" className="logo">
             DATA SCIENCE
           </a>
           <nav>
@@ -200,7 +201,14 @@ export default function Home() {
           {teamMembers.map((m) => (
             <article className="member-card" key={m.name}>
               <div className="member-photo">
-                <img src={m.image} alt={m.name} />
+                <Image
+                  src={m.image}
+                  alt={m.name}
+                  width={480}
+                  height={176}
+                  sizes="(max-width: 600px) 85vw, (max-width: 900px) 48vw, 300px"
+                  loading="lazy"
+                />
               </div>
               <div className="member-info">
                 <h3>{m.name}</h3>
@@ -256,6 +264,8 @@ export default function Home() {
                 <img 
                   src={tool.iconUrl} 
                   alt={tool.name} 
+                  loading="lazy"
+                  decoding="async"
                   style={{ 
                     height: '22px', 
                     width: 'auto', 
@@ -283,7 +293,14 @@ export default function Home() {
                   {/* Bagian Gambar */}
                   <div className="project-image">
                     {skill.image ? (
-                      <img src={skill.image} alt={skill.title} />
+                      <Image
+                        src={skill.image}
+                        alt={skill.title}
+                        fill
+                        sizes="(max-width: 600px) 85vw, (max-width: 900px) 48vw, 32vw"
+                        style={{ objectFit: "cover" }}
+                        loading="lazy"
+                      />
                     ) : (
                       <div className="visual-placeholder">
                         {String(i + 1).padStart(2, "0")}
@@ -296,7 +313,12 @@ export default function Home() {
                     <span>PROJECT {String(i + 1).padStart(2, "0")}</span>
                     <h3>{skill.title}</h3>
                     <p>{skill.shortDesc}</p>
-                    <a href="#">View Details ↗</a>
+                    <a
+                      href="#"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      View Details ↗
+                    </a>
                   </div>
                 </article>
               ))}
@@ -309,9 +331,9 @@ export default function Home() {
       {/* CLOSING */}
       <section className="closing" id="contact">
         <div className="container">
-          <span className="section-label">LET'S COLLABORATE</span>
+          <span className="section-label">LET&apos;S COLLABORATE</span>
           <h2>
-            Let's make
+            Let&apos;s make
             <br />
             data <em>matter.</em>
           </h2>
@@ -329,7 +351,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <div className="container footer-inner">
-          <a href="#" className="logo">DATA SCIENCE</a>
+          <a href="#home" className="logo">DATA SCIENCE</a>
           <span>Built with curiosity &amp; purpose.</span>
           <a href="#home">BACK TO TOP ↑</a>
         </div>

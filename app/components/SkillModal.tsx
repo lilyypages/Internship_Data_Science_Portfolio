@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import type { Skill } from "@/lib/skills";
 
 type Props = {
@@ -36,12 +37,13 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
+    const previousOverflow = document.body.style.overflow;
     document.addEventListener("keydown", handleKey);
     document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleKey);
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
   }, [skill, onClose]);
 
@@ -62,8 +64,14 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
+        aria-labelledby="skill-modal-title"
       >
-        <button className="modal-close" onClick={onClose} aria-label="Close">
+        <button
+          type="button"
+          className="modal-close"
+          onClick={onClose}
+          aria-label="Close"
+        >
           ✕
         </button>
 
@@ -82,20 +90,34 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
                   playsInline
                 />
               ) : (
-                <img
+                <Image
+                  key={images[currentImg]}
                   src={images[currentImg]}
                   alt={`${skill.title} - ${currentImg + 1}`}
                   className="carousel-image"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 900px"
+                  quality={85}
                 />
               )}
 
               {/* Tombol Navigasi (Cuma muncul kalau item lebih dari 1) */}
               {images.length > 1 && (
                 <>
-                  <button className="carousel-btn prev" onClick={prevImg}>
+                  <button
+                    type="button"
+                    className="carousel-btn prev"
+                    onClick={prevImg}
+                    aria-label="Previous image"
+                  >
                     ❮
                   </button>
-                  <button className="carousel-btn next" onClick={nextImg}>
+                  <button
+                    type="button"
+                    className="carousel-btn next"
+                    onClick={nextImg}
+                    aria-label="Next image"
+                  >
                     ❯
                   </button>
                   <div className="carousel-counter">
@@ -111,7 +133,7 @@ export default function SkillModal({ skill, categoryLabel, onClose }: Props) {
 
             {/* --- BAGIAN JUDUL & LINK --- */}
             <div className="modal-title-row">
-              <h2>{skill.title}</h2>
+              <h2 id="skill-modal-title">{skill.title}</h2>
               {skill.link && (
                 <a
                   href={skill.link}
